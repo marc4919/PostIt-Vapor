@@ -1,0 +1,13 @@
+#extend("layout"):
+    #export("content"):
+        <main id="create">
+            <div class="post-form">
+                <form action="" method="post">
+                    <input type="text" name="title" placeholder="Title" required>
+                    <textarea name="description" rows="5" placeholder="Write your post..." required></textarea>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </main>
+    #endexport
+#endextend

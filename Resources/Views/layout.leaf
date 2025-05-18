@@ -1,0 +1,15 @@
+#extend("base"):
+    #export("layout"):
+        <header>
+            <a href="/posts" class="link">PostIt</a>
+            <nav>
+                <a href="/posts/list">Posts</a>
+                <a href="/posts/create">Create</a>
+            </nav>
+        </header>
+        <div id="content">
+            #import("content")
+        </div>
+    #endexport
+#endextend
+

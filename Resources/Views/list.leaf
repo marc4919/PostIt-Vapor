@@ -1,0 +1,15 @@
+#extend("layout"):
+    #export("content"):
+        <main id="posts-container">
+            #for(post in posts):
+                <div class="post">
+                    <h2>#(post.title)</h2>
+                    <h3>#(post.description)</h3>
+                </div>
+            #endfor
+        </main>
+    #endexport
+#endextend
+
+
+

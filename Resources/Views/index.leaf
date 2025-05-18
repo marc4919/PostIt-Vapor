@@ -1,0 +1,10 @@
+#extend("layout"):
+    #export("content"):
+        <main id="home">
+            #import("index-icon")
+            <a href="/posts/list"><h1>PostIt</h1></a>
+        </main>
+    #endexport
+#endextend
+
+
