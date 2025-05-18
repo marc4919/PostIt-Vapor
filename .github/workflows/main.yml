@@ -14,13 +14,15 @@ jobs:
       - name: Check out code
         uses: actions/checkout@v3
 
-      # 2. Configurar Fly.io
+      # 2. Instalar Flyctl
       - name: Install Flyctl
         run: |
           curl -L https://fly.io/install.sh | sh
-          export FLYCTL_INSTALL=/home/runner/.fly
+          export FLYCTL_INSTALL="/home/runner/.fly"
           export PATH="$FLYCTL_INSTALL/bin:$PATH"
-          
+          echo "FLYCTL_INSTALL=$FLYCTL_INSTALL" >> $GITHUB_ENV
+          echo "PATH=$FLYCTL_INSTALL/bin:$PATH" >> $GITHUB_ENV
+
       # 3. Autenticación en Fly.io
       - name: Authenticate with Fly.io
         env:
