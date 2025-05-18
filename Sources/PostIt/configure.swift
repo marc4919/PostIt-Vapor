@@ -9,10 +9,10 @@ public func configure(_ app: Application) async throws {
 
     if let databaseURL = Environment.get("DATABASE_URL") {
         try app.databases.use(.postgres(url: databaseURL), as: .psql)
-        app.logger.info("Conexión a la base de datos establecida correctamente")
+        app.logger.info("Connected")
     } else {
-        app.logger.critical("DATABASE_URL no está configurada o es inválida")
-        throw Abort(.internalServerError, reason: "No se pudo configurar la base de datos")
+        app.logger.critical("DATABASE_URL not valid")
+        throw Abort(.internalServerError, reason: "Can`t connect to database")
     }
 
     app.migrations.add(PostsMigration())
