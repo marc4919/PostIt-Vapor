@@ -86,20 +86,20 @@ header a:active {
     font-weight: bold;
     margin: 0;
     margin-bottom: 0.5rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: left;
 }
 
 .post h3 {
     margin: 0;
     font-size: 0.9rem;
     color: #333;
+}
+
+.post h2, .post h3 {
     text-align: left;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
 }
 
 .post-form {
