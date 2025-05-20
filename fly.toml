@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for postit on 2025-05-18T14:50:51+02:00
+# fly.toml app configuration file generated for postit on 2025-05-21T01:09:56+02:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
 app = 'postit'
-primary_region = 'cdg'
+primary_region = 'mad'
 
 [build]
 
@@ -17,6 +17,5 @@ primary_region = 'cdg'
   processes = ['app']
 
 [[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
-  cpus = 1
+  size = 'shared-cpu-1x'
+  memory = '256mb'
